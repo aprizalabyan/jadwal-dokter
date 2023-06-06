@@ -1,38 +1,311 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --primaryColor: #043D4E;
+  --greyColor: #61838D;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body, span, p {
+  font-size: 14px;
+  color: var(--primaryColor);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.react-calendar {
+  width: auto;
+  max-width: 100%;
+  background: none;
+  border: 1px solid var(--primaryColor);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.125em;
+  border-radius: 16px;
+  padding: 12px 12px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.react-calendar--doubleView {
+  width: 700px;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
   display: flex;
-  flex-direction: column;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--greyColor);
+  padding-bottom: 12px;
+}
+
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+
+.react-calendar__navigation button:disabled {
+  background-color: white;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+/* .react-calendar__month-view__days__day--weekend {
+  color: #d10000;
+} */
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #757575;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 22px 0px;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 14px 6.6667px;
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  /* border-radius: 50%; */
+}
+
+.react-calendar__tile:disabled {
+  background-color: white;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__tile--now {
+  background: #aecad3;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #bed8e0;
+}
+
+.react-calendar__tile--hasActive {
+  background: #aecad3;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #bed8e0;
+}
+
+.react-calendar__tile--active {
+  background: var(--primaryColor);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: var(--primaryColor);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+
+.react-calendar__sunday{
+  color: red;
+}
+
+.btnPrimary{
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.topper{
+  background-color: var(--primaryColor);
+}
+.topper span{
+  color: white;
+}
+.topper .icon{
+  width: 20px;
+  height: 20px;
+}
+
+.navbar{
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+.navbar a span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.navbar .nav-link{
+  color: var(--primaryColor);
+  font-size: 16px;
+}
+.navbar .nav-link.active{
+  color: var(--primaryColor);
+  font-weight: 600;
+}
+.navbar .btnSearch{
+  border: none;
+  background: none;
+  color: var(--primaryColor);
+}
+.navbar form{
+  border: none;
+  background: none;
+  width: 240px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.form-control, .form-select{
+  font-size: 14px;
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+.form-control::placeholder{
+  color: var(--greyColor);
+}
+.form-control:focus, .form-select:focus{
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+  border-color: var(--primaryColor);
+}
+
+.imgProfile{
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+}
+.card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card{
+  border: 1px solid var(--primaryColor);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  color: var(--primaryColor);
+}
+
+.pagination{
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--greyColor);
+  padding: 12px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.pagination li a {
+  padding: 6px 12px;
+}
+.pagination .active{
+  color: var(--primaryColor);
+}
+.pagination .previous a, .pagination .next a{
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+.pagination .previous.disabled a, .pagination .next.disabled a{
+  color: #a2abad;
+  text-decoration: none;
+  cursor: default;
+}
+
+#footer{
+  background-color: var(--primaryColor);
+}
+#footer span, #footer h6{
+  color: white;
+}
+#footer a{
+  text-decoration: none;
+  color: white;
+}
+#footer span.copyright{
+  font-size: 12px;
+}
+
+/* --------------------- MEDIA SCREEN --------------------- */
+@media screen and (max-width: 992px) {
+
+}
+@media screen and (max-width: 768px) {
+  .topper span{
+    font-size: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .topper .icon{
+    width: 16px;
+    height: 16px;
+  }
+  .listHeader span{
+    font-size: 12px;
+  }
+  .pagination{
+    justify-content: center;
+  }
+  #footer span{
+    font-size: 12px;
+  }
+  #footer span.copyright{
+    font-size: 10px;
   }
 }
