@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/jadwal-dokter/static/css/main.2e4ffdd2.css",
+    "main.js": "/jadwal-dokter/static/js/main.12f9f672.js",
+    "static/media/dok-1.jpg": "/jadwal-dokter/static/media/dok-1.0a6abedf09ea191b825b.jpg",
+    "index.html": "/jadwal-dokter/index.html",
+    "static/media/logo-outer-primary.svg": "/jadwal-dokter/static/media/logo-outer-primary.05e33fa4114ec4da15536f63448c871d.svg",
+    "static/media/logo-outer-white.svg": "/jadwal-dokter/static/media/logo-outer-white.e02c64a633ff581ca0579487609907c5.svg",
+    "main.2e4ffdd2.css.map": "/jadwal-dokter/static/css/main.2e4ffdd2.css.map",
+    "main.12f9f672.js.map": "/jadwal-dokter/static/js/main.12f9f672.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e4ffdd2.css",
+    "static/js/main.12f9f672.js"
+  ]
+}
